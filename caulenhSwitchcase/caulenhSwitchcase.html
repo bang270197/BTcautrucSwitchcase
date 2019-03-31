@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td><input type="text" id="thang" placeholder="Nhap thang"></td>
+            <td><input type="button" value="Nhap vao thang" onclick="hienthingay();"></td>
+        </tr>
+    </table>
+</form>
+
+<script>
+    function hienthingay() {
+        let thang = parseInt(document.getElementById("thang").value);
+
+
+       switch (thang) {
+           case 1:
+           case 3:
+           case 5:
+           case 7:
+           case 8:
+           case 10:
+           case  12:
+               alert('Thang '+thang + ' Co 31 ngay');
+               break;
+           case 4:
+           case 6:
+           case 9:
+           case 11:
+               alert('Thang '+thang + ' Co 30 ngay');
+               break;
+           case 2:
+               alert('Thang '+thang + ' Co 28 hoac 29 ngay');
+               break
+           default:
+               alert("Yeu cau nhap thang tu 1-12");
+               break;
+       }
+        }
+
+
+</script>
+</body>
+</html>
